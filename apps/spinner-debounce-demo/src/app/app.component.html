@@ -1,0 +1,29 @@
+<section>
+  <h2>Without <code>spinnerDebounce()</code></h2>
+
+  <div>
+    <button (click)="shortTask()">
+      <span *ngIf="(loadingShort$ | async) === true">Loading...</span>
+      Trigger short task
+    </button>
+    <button (click)="longTask()">
+      <span *ngIf="(loadingLong$ | async) === true">Loading...</span>
+      Trigger long task
+    </button>
+  </div>
+</section>
+
+<section>
+  <h2>With <code>spinnerDebounce()</code></h2>
+
+  <div>
+    <button (click)="spinnerDebounceShortTask()">
+      <span *ngIf="(loadingSpinnerDebounceShort$ | async) === true">Loading...</span>
+      Trigger short task
+    </button>
+    <button (click)="spinnerDebounceLongTask()">
+      <span *ngIf="(loadingSpinnerDebounceLong$ | async) === true">Loading...</span>
+      Trigger long task
+    </button>
+  </div>
+</section>
