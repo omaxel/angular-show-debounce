@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/libs/spinner-debounce",
+  "dest": "../../dist/libs/show-debounce",
   "lib": {
     "entryFile": "src/index.ts"
   }

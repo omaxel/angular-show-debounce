@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "angular-spinner-debounce",
+  "npmScope": "angular-show-debounce",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
@@ -53,5 +53,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "spinner-debounce-demo"
+  "defaultProject": "show-debounce"
 }

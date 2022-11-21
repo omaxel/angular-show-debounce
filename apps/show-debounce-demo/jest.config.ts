@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'spinner-debounce-demo',
+  displayName: 'show-debounce-demo',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/spinner-debounce-demo',
+  coverageDirectory: '../../coverage/apps/show-debounce-demo',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

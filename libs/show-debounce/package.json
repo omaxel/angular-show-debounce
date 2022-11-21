@@ -1,0 +1,14 @@
+{
+  "name": "@omaxel/angular-show-debounce",
+  "version": "1.0.2",
+  "author": "Omar Muscatello",
+  "repository": "github:omaxel/angular-show-debounce",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "rxjs": "~7.5.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

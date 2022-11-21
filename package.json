@@ -1,13 +1,14 @@
 {
-  "name": "angular-spinner-debounce",
+  "name": "angular-show-debounce",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "start-demo": "nx serve show-debounce-demo",
+    "build": "nx build && copyfiles README.md dist/libs/show-debounce",
+    "test": "nx test",
+    "prettify": "prettier --write ."
   },
   "private": true,
   "dependencies": {
@@ -42,6 +43,7 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
+    "copyfiles": "^2.4.1",
     "cypress": "^10.7.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@omaxel/angular-spinner-debounce": ["libs/spinner-debounce/src/index.ts"]
+      "@omaxel/angular-show-debounce": ["libs/show-debounce/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,15 +1,15 @@
-import { spinnerDebounce } from './spinner-debounce.operator';
+import { showDebounce } from './show-debounce.operator';
 import { TestScheduler } from 'rxjs/testing';
 import { Observable } from 'rxjs';
 
-describe('Spinner debounce', () => {
+describe('Show debounce operator', () => {
   let testScheduler: TestScheduler;
 
-  const debounceTime = 100;
+  const DEBOUNCE_TIME = 100;
   const values = { t: true, f: false };
 
   function getTestedObservable(source: Observable<boolean>) {
-    return source.pipe(spinnerDebounce(debounceTime));
+    return source.pipe(showDebounce(DEBOUNCE_TIME));
   }
 
   beforeEach(() => {
@@ -24,7 +24,7 @@ describe('Spinner debounce', () => {
       const source = cold('f t 1s f   ', values);
 
       // Time frames:             0 1                 101  102   1002
-      const expected = `          f ${debounceTime}ms t    900ms f   `;
+      const expected = `          f ${DEBOUNCE_TIME}ms t    900ms f   `;
 
       const testedObservable$ = getTestedObservable(source);
 

@@ -1,5 +1,5 @@
 <section>
-  <h2>Without <code>spinnerDebounce()</code></h2>
+  <h2>With <code>*ngIf</code></h2>
 
   <div>
     <button (click)="shortTask()">
@@ -14,15 +14,17 @@
 </section>
 
 <section>
-  <h2>With <code>spinnerDebounce()</code></h2>
+  <h2>With <code>*omxDebounceIf</code></h2>
 
   <div>
-    <button (click)="spinnerDebounceShortTask()">
-      <span *ngIf="(loadingSpinnerDebounceShort$ | async) === true">Loading...</span>
+    <button (click)="shortTask2()">
+      <span *omxDebouncedIf="(loadingShort2$ | async) === true"
+        >Loading...</span
+      >
       Trigger short task
     </button>
-    <button (click)="spinnerDebounceLongTask()">
-      <span *ngIf="(loadingSpinnerDebounceLong$ | async) === true">Loading...</span>
+    <button (click)="longTask2()">
+      <span *omxDebouncedIf="(loadingLong2$ | async) === true">Loading...</span>
       Trigger long task
     </button>
   </div>
