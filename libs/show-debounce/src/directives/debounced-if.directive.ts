@@ -1,4 +1,5 @@
 import {
+  ChangeDetectorRef,
   Directive,
   ElementRef,
   Input,
@@ -21,7 +22,8 @@ export class DebouncedIfDirective implements OnInit, OnDestroy {
   constructor(
     private element: ElementRef,
     private templateRef: TemplateRef<unknown>,
-    private viewContainer: ViewContainerRef
+    private viewContainer: ViewContainerRef,
+    private changeDetector: ChangeDetectorRef
   ) {}
 
   @Input() omxDebouncedIfDebounce: number | null = null;
@@ -40,6 +42,8 @@ export class DebouncedIfDirective implements OnInit, OnDestroy {
         } else {
           this.viewContainer.clear();
         }
+
+        this.changeDetector.markForCheck();
       });
   }
 
