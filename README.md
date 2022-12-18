@@ -90,8 +90,6 @@ This code is safe since the user knows something is happening.
 
 What happens, thought, when `executeTask()` completes "almost" immediately? The user will assist to an appearing of the spinner immediately followed by its disappearing.
 
-> mettere immagine
-
 That's bad, don't you agree? The same article of the first quote continues:
 
 > 0.1 second is about the limit for having the user feel that the system is reacting instantaneously, meaning that no special feedback is necessary except to display the result.
